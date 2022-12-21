@@ -49,12 +49,13 @@ div.main_4 div {
     flex-direction: column;
     transition: transform 1s;
 }
+
 div.main_4 div:hover {
     transform: scale(1.08, 1.08);
 }
 
 div.main_4 div tr {
-    font-family: 'Titillium'; 
+    font-family: 'Titillium';
     font-weight: 700;
     color: #fff;
     font-size: 20px;
@@ -93,6 +94,7 @@ table {
     font-size: 23px;
     width: 130px;
 }
+
 #postoff {
     font-family: 'Titillium';
     letter-spacing: 1px;
@@ -102,6 +104,7 @@ table {
 #pincode:focus {
     background-color: rgb(207, 238, 227);
 }
+
 #postoff:focus {
     background-color: rgb(207, 238, 227);
 }
@@ -135,6 +138,47 @@ table {
 tr:nth-child(even) {
     background-color: #b9dcee37;
 }
+
 tr:nth-child(even) {
     background-color: #86cbd33d;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-image: url("images/mbw.jpeg");
+        background-attachment: fixed;
+    }
+
+    #pincode {
+        font-family: 'Titillium';
+        letter-spacing: 1px;
+        font-size: 19px;
+        width: 170px;
+    }
+
+    #postoff {
+        font-family: 'Titillium';
+        letter-spacing: 1px;
+        font-size: 19px;
+        width: 180px;
+    }
+
+    div.main_4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    div.main_4 div tr {
+        font-size: 16px;
+    }
+
+    .thead {
+        font-weight: 900 !important;
+        font-size: 19px;
+        color: #27c807;
+    }
 }
