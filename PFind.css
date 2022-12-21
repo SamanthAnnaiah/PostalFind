@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Postal';
+    src: url("/fonts/Postal.ttf");
+}
+
+@font-face {
+    font-family: 'PostalBold';
+    src: url("/fonts/PostalBold.ttf");
+}
+
+@font-face {
+    font-family: 'Titillium';
+    src: url("/fonts/TitilliumWeb-Bold.ttf");
+}
+
+body {
+    background-image: url("images/bgdesk.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+div.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.main div {
+    margin: 10px;
+    font-family: Postal;
+    letter-spacing: 2px;
+    justify-self: center;
+    align-self: center;
+}
+
+div.main_4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+div.main_4 div {
+    display: flex;
+    flex-direction: column;
+    transition: transform 1s;
+}
+div.main_4 div:hover {
+    transform: scale(1.08, 1.08);
+}
+
+div.main_4 div tr {
+    font-family: 'Titillium'; 
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+}
+
+table {
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    border-collapse: separate;
+    border-spacing: 20px;
+    background-color: hsla(215, 53%, 40%, 0.736)
+}
+
+.thead {
+    font-weight: 900 !important;
+    font-size: 23px;
+    color: #ad8b10;
+}
+
+#search {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+    transition: width 0.5s;
+}
+
+#search:hover {
+    cursor: pointer;
+    width: 210px;
+}
+
+#pincode {
+    font-family: 'Titillium';
+    letter-spacing: 1px;
+    font-size: 23px;
+    width: 130px;
+}
+#postoff {
+    font-family: 'Titillium';
+    letter-spacing: 1px;
+    font-size: 23px;
+}
+
+#pincode:focus {
+    background-color: rgb(207, 238, 227);
+}
+#postoff:focus {
+    background-color: rgb(207, 238, 227);
+}
+
+.inp1 {
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.glow {
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-family: PostalBold;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #e60073, 0 0 20px #e60073, 0 0 20px #e60073, 0 0 20px #e60073, 0 0 70px #e60073;
+}
+
+.text_1 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: rgb(223, 223, 193) !important;
+}
+
+.text_2 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: rgb(223, 223, 193) !important;
+}
+
+tr:nth-child(even) {
+    background-color: #b9dcee37;
+}
+tr:nth-child(even) {
+    background-color: #86cbd33d;
+}

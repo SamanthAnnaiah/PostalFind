@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinCodeDetailer</title>
+    <link rel="stylesheet" href="PFind.css">
+    <link rel="shortcut icon" href="images/Jfavicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="main">
+            <div class="main_1">
+                <h1 class="glow">PINCODE Detailer</h1>
+            </div>
+            <div class="main_2 text_1">
+                <label for="pincode">PINCODE</label>
+                <input type="number" name="pin" id="pincode" class="inp1" maxlength="6" autocomplete="on" oninput="inValidate(this)">
+            </div>
+            <div class="main_2 text_1">
+                OR
+            </div>
+            <div class="main_2 text_1">
+                <label for="postoff">PostOffice</label>
+                <input type="text" name="pin" id="postoff" class="inp1" maxlength="20" autocomplete="on">
+            </div>
+            <div class="main_3">
+                <img src="images/search.png" alt="" id="search" onclick="postFinder()">
+            </div>
+            <div class="main_4">
+
+            </div>
+        </div>
+    </div>
+    <script src="JPFind.js"></script>
+</body>
+
+</html>
