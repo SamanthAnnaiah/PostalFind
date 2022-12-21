@@ -1,5 +1,5 @@
 # PostalFind
- Provides details of any PIN CODE in India
+ This application allows us to find details about any PINCODE or post office situated in INDIA. 
 
  Technologies used:
 
