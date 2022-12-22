@@ -1,4 +1,6 @@
 let maxinlength = 6
+let pincode = ""
+let postoff = ""
 
 function inValidate(tid) {
     if (tid.value.length == 1 && (tid.value == 0 || tid.value == "-")) {
@@ -14,27 +16,26 @@ function inValidate(tid) {
 function postFinder() {
     let apivalue = ""
     let apikey = ""
-    let pincode = document.getElementById("pincode")
-    let postoff = document.getElementById("postoff")
+    pincode = document.getElementById("pincode")
+    postoff = document.getElementById("postoff")
     if (postoff.value == "" && pincode.value.length != 6) {
         window.alert("The PINCODE length should be of 6 digits")
     } else {
         if (postoff.value != "" && pincode.value > 0) {
             window.alert("Enter any one value")
-        }
-        else {
+        } else {
             if (postoff.value != "") {
                 apivalue = postoff.value
                 apivalue = apivalue.trim()
-                let tempkey   = capitaling(apivalue)
-                apikey = tempkey.join("")  
-                apikey = "postoffice/" + apikey   
+                let tempkey = capitaling(apivalue)
+                apikey = tempkey.join("")
+                apikey = "postoffice/" + apikey
             } else {
-                apikey = pincode.value 
-                apikey = "pincode/" + apikey   
+                apikey = pincode.value
+                apikey = "pincode/" + apikey
             }
         }
-        let pinurl = "https://api.postalpincode.in/" + apikey 
+        let pinurl = "https://api.postalpincode.in/" + apikey
         fetch(pinurl)
             .then((response) => response.json())
             .then((data) => postProcess(data))
@@ -53,6 +54,7 @@ function postProcess(data) {
 
         for (i in data) {
             for (j in data[i].PostOffice) {
+                console.log(data[i])
                 let poffice = document.createElement("div")
 
                 let ptable = document.createElement("table")
@@ -114,6 +116,15 @@ function postProcess(data) {
                 ptr6.appendChild(ptd12)
                 ptable.appendChild(ptr6)
 
+                let ptr7 = document.createElement("tr")
+                let ptd13 = document.createElement("td")
+                ptd13.textContent = "PINCode: "
+                ptr7.appendChild(ptd13)
+                let ptd14 = document.createElement("td")
+                ptd14.textContent = data[i].PostOffice[j].Pincode
+                ptr7.appendChild(ptd14)
+                ptable.appendChild(ptr7)
+
 
                 poffice.appendChild(ptable)
                 resbucket.appendChild(poffice)
@@ -134,5 +145,5 @@ function capitaling(apicap) {
             apicon[i] = apistr[i]
         }
     }
-    return apicon 
+    return apicon
 }
